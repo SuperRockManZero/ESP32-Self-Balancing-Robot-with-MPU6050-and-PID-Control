@@ -1,34 +1,5 @@
 /* author : Calvin Kuo
 // ESP_Car2W_ver07 (Aug.12,2023)
-# 以較低頻率PWM模擬全壓啟動8msec。
-// ESP_Car2W_ver06 (Aug.09,2023)
-# 按 ESP_MotorStartup 所得數據重做馬達全壓起動
-// ESP_MotorStartup (Aug.08,2023)
-# 測量TT馬達(以減速比1:48款為例)之最小起動電壓(以PWM計)？及全壓起動之最小持續時間？
-# 當電池電壓7.27V時，測得最小起動電壓 = PWM128。全壓起動之最小持續時間 = 8ms。
-# 以上述測得全壓起動後，接續最小可運轉電壓(以PWM計)？
-# 測得全壓起動後之最小可運轉電壓 = 48。
-# 以上述測得之全壓起動後之最小可運轉電壓，重測量可能的最小全壓起動時間長度?
-# 最小全壓起動時間長度 = 7ms。
-// ESP_Car2W_ver05 (Aug.02,2023)
-# 試作低速馬達啟動，全電壓啟動後再降轉速度。
-// ESP_Car2W_ver04 (Jul.04,2023)
-# 取消中斷，確認可行性。
-# 整理程式，相同的DMP數據不重複執行PID。
-// ESP_Car2W_ver03 (Jul.03,2023)
-# Kp、Ki、Kd調校。經由藍芽修改PID參數。
-# 測得較佳數據為：Kp=20、Ki=140、Kd=0.8
-// ESP_Car2W_ver02 (Jul.03,2023)
-# 測量整車在平衡狀態的Pitch角度。
-# 暫時關閉TT Motor以靜止狀態嘗試以外力調整使整車平衡，以藍芽回傳Pitch角度數據。
-# 測得約-7度、4度(含平衡重物)。
-// ESP_Car2W_ver01 (Jul.03,2023)
-# 參考函式庫的範例程式MPU6050_DMP6，試做兩輪平衡。
-#不使用中斷還是可以讀取到最後一筆DMP數據，故可以考慮取消中斷。
-// ESP_Car2W_Test (Jun.xx,2023)
-#	試做兩輪平衡。由MPU6050 DMP取得Pitch角，經PID運算後控制TT Motor轉速。
-// ESP_MPU6050_DMP6	 (Jun.xx,2023)
-# 試做讀取 MPU6050 DMP
 // Wiring
   ESP32 GPIO22 -> MPU6050 SCL
   ESP32 GPIO21 -> MPU6050 SDA
